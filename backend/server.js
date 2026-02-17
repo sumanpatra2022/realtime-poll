@@ -14,7 +14,7 @@ const FRONTEND_URL = "https://realtime-poll-sand.vercel.app"; // your Vercel URL
 
 // ✅ Express CORS
 app.use(cors({
-  origin: [ "https://realtime-poll-sand.vercel.app"],
+  origin: [ "https://realtime-poll-lyart.vercel.app"],
   methods: ["GET", "POST"],
   credentials: true
 }));
@@ -24,7 +24,7 @@ app.use(express.json());
 // ✅ Socket.io CORS
 const io = new Server(server, {
   cors: {
-    origin: "https://realtime-poll-sand.vercel.app",
+    origin: "https://realtime-poll-lyart.vercel.app",
     methods: ["GET", "POST"],
     credentials: true
   }
