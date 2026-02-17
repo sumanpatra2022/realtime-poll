@@ -1,5 +1,5 @@
 const express = require("express");
-const Poll = require("../models/poll.js");
+const Poll = require("../models/Poll.js");
 const Vote = require("../models/Vote");
 const rateLimit = require("express-rate-limit");
 
