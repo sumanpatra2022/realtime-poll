@@ -14,7 +14,7 @@ const FRONTEND_URL = "https://realtime-poll-sand.vercel.app"; // your Vercel URL
 
 // ✅ Express CORS
 app.use(cors({
-  origin: FRONTEND_URL,
+  origin: [ "https://realtime-poll-sand.vercel.app"],
   methods: ["GET", "POST"],
   credentials: true
 }));
@@ -24,11 +24,12 @@ app.use(express.json());
 // ✅ Socket.io CORS
 const io = new Server(server, {
   cors: {
-    origin: FRONTEND_URL,
+    origin: "https://realtime-poll-sand.vercel.app",
     methods: ["GET", "POST"],
     credentials: true
   }
 });
+
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
