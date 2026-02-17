@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { io } from "socket.io-client";
 
-const socket = io("https://realtime-poll-vdrg.onrender.com");
+const socket = io("https://realtime-poll-ydrg.onrender.com");
 
 function PollRoom() {
   const { id } = useParams();
@@ -30,7 +30,7 @@ function PollRoom() {
   const fetchPoll = async () => {
     try {
       const res = await axios.get(
-        `https://realtime-poll-vdrg.onrender.com/api/polls/${id}`
+        `https://realtime-poll-ydrg.onrender.com/api/polls/${id}`
       );
       setPoll(res.data);
     } catch (err) {
@@ -41,7 +41,7 @@ function PollRoom() {
   const handleVote = async () => {
     try {
      await axios.post(
-  `https://realtime-poll-vdrg.onrender.com/api/polls/${id}/vote`,
+  `https://realtime-poll-ydrg.onrender.com/api/polls/${id}/vote`,
 
         {
           optionIndex: selected

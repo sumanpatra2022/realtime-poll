@@ -29,7 +29,7 @@ function CreatePoll() {
      const filteredOptions = options.filter(opt => opt.trim() !== "");
 
 const res = await axios.post(
-  "https://realtime-poll-vdrg.onrender.com/api/polls",
+  "https://realtime-poll-ydrg.onrender.com/api/polls",
   {
     question,
     options: filteredOptions

@@ -10,7 +10,7 @@ const pollRoutes = require("./routes/pollRoutes");
 const app = express();
 const server = http.createServer(app);
 
-const FRONTEND_URL = "https://realtime-poll-sand.vercel.app"; // your Vercel URL
+const FRONTEND_URL = "https://realtime-poll-lyart.vercel.app"; // your Vercel URL
 
 // ✅ Express CORS
 app.use(cors({
